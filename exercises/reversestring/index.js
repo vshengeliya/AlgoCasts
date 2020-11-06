@@ -16,6 +16,7 @@ function reverse(str) {
 
 module.exports = reverse;
 
+//another solution
 // function reverse(str){
 //     let reversedStr = [...str].reverse().join('')
 //     return reversedStr
