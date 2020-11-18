@@ -8,7 +8,8 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-function reverseInt(n) {
+//1st solution
+function reverseInt1(n) {
 
     let reversed;
     if (Math.sign(n)===1 ||  n === 0){
@@ -19,9 +20,13 @@ function reverseInt(n) {
     return reversed
 }
 
-console.log(reverseInt(-5))
+// 2nd solution
+function reverseInt2(n){
+    let reversed = n.toString().split('').reverse().join('')
+    return parseInt(reversed) * Math.sign(n);
+}
 
-//Math.sign() returns 1 is positive number, return 0 if negative number
+//Math.sign() returns 1 is positive number, return -1 if negative number
 //ParseInt 
 //toString
 
