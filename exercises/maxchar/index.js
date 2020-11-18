@@ -23,9 +23,8 @@ function maxChar(str) {
             max = charMap[char];
             maxChar = char;
         } 
-        return maxChar
     }
-
+    return maxChar
 }
 
 
