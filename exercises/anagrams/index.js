@@ -10,7 +10,8 @@
 
 function anagrams(stringA, stringB) {
 
-    //need to build a helper fucntion buildCharMap to clear up the strings and build an object
+    //need to build a helper fucntion buildCharMap to clear up the strings and build an object,
+    // so we can pass 2 given strings
 
     const aCharMap = buildCharMap(stringA)
     const bCharMap = buildCharMap(stringB)
