@@ -22,9 +22,10 @@ function anagrams(stringA, stringB) {
         return false
     } 
    
-    for (let char of stringA){
+    for (let char in stringA){
+        // for let .. in (for obj) // of (for arrays)
     //.. compare if the quantity of each key are the same exp. strA[h]=1, strB[h]=1, if 1===1, return true
-        if (aCharMap[char]!= bCharMap[char]){
+        if (aCharMap[char]!== bCharMap[char]){
             return false
         }
     }
@@ -40,6 +41,22 @@ function anagrams(stringA, stringB) {
         }
         return charMap
     }
+
+    //2nd solution
+  function anagrams (stringA, stringB){
+
+    return cleanString(stringA) === cleanString(stringB)
+  }
+
+  // helper fucntion 
+  function cleanString(str){
+    return str
+    .replace(/[^\w]/g, '')
+    .toLowerCase()
+    .split('')
+    .sort()
+    .join('')
+  }
 
 anagrams('hello', 'lleho!!!?><')
 
