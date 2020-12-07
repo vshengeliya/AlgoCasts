@@ -18,7 +18,7 @@ function pyramid(n) {
 
     // From 0 to n (iterate through rows)
     //Create an empty string, 'level'
-    // From 0 to ??(columns)
+    // From 0 to 2 * n-1(columns)
     //IF the column sould have a #
     //Add a '#' to 'level'
     //ELSE
@@ -29,7 +29,7 @@ function pyramid(n) {
 
         for (let row = 0; row < n; row++ ){
             let level = ''
-            
+
                 for (column = 0; column < 2 * n-1; column++){
                     if ( midpoint - row <= column && midpoint + row >= column){
                         level += '#'
@@ -42,5 +42,28 @@ function pyramid(n) {
 }
 
 console.log(pyramid(3))
+
+//2nd solution using recursion
+
+function pyramid(n, row = 0, level = ''){
+
+    if (row === n){
+        return;
+    }
+
+    if (level.length === 2 * n -1 ){
+        console.log(level)
+        return pyramid (n, row +1);
+    }
+    const midpoint = Math.floor((2 * n -1)/2);
+    let add;
+
+    if (midpoint - row <= level.length && midpoint + row >= level.length){
+        add = '#'
+    } else {
+        add =' '
+    }
+    pyramid (n,row, level+add);
+}
 
 module.exports = pyramid;
