@@ -21,4 +21,12 @@ function vowels(str) {
     return count
 }
 
+//2nd solution
+
+function vowels(str){
+
+    let matched = str.match(/[aoeiu]/gi)
+    return matched? matched.length : 0
+}
+
 module.exports = vowels;
