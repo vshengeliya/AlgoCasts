@@ -15,6 +15,28 @@
 //     [11, 16, 15, 6],
 //     [10,  9,  8, 7]]
 
-function matrix(n) {}
+function matrix(n) {
+
+    //Create an empty aray called 'results'
+    // Create a counter variable, starting at 1
+    // As long as (start column <= end column) and (start row <= end row)
+        //Loop from strt column to end column
+            //As results [start_row][i] assign counter variable
+            //Increment couner
+        //Increment start row
+        //Loop from strt row to end row
+            //At results[i][end_column] aggidn counter variable
+            //Increment counter
+        //Decrement end row
+        //..repeat for other tow sides
+
+    let rusults = []
+    let counter = 1
+    
+
+    
+
+    
+}
 
 module.exports = matrix;
