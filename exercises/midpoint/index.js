@@ -12,6 +12,18 @@
 //   l.insertLast('c')
 //   midpoint(l); // returns { data: 'b' }
 
-function midpoint(list) {}
+function midpoint(list) {
+
+    let slow = list.head; // both pointing to the beginning of the list
+    let fast = list.head;
+
+    while (fast.next && fast.next.next){ // as long as there is a two last nodes exists - advance in a lopp
+        slow = slow.next;
+        fast = fast.next.next;
+    }// esle we reach the end of the list with the fast variable and our slow variable is exactly in the middle of the list
+    // or in the last node of the first half.
+
+    return slow;//return it
+}
 
 module.exports = midpoint;
